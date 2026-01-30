@@ -1,0 +1,4 @@
+# flyctl launch added from .gitignore
+**/posthog-proxy
+**/.DS_Store
+fly.toml

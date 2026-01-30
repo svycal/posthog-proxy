@@ -1,26 +1,31 @@
-app = "posthog-proxy"
-primary_region = "iad"
+# fly.toml app configuration file generated for savvycal-posthog-proxy on 2026-01-30T11:00:43-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'savvycal-posthog-proxy'
+primary_region = 'iad'
 
 [build]
 
 [env]
-  POSTHOG_REGION = "us"
+  POSTHOG_REGION = 'us'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
 
-[[http_service.checks]]
-  grace_period = "5s"
-  interval = "30s"
-  method = "GET"
-  path = "/health"
-  timeout = "5s"
+  [[http_service.checks]]
+    interval = '30s'
+    timeout = '5s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/health'
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
   cpus = 1
+  memory_mb = 256
