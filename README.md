@@ -24,6 +24,15 @@ fly deploy
 
 The app will auto-stop when idle and auto-start on incoming requests to minimize costs.
 
+### CI/CD
+
+Pushes to `main` automatically run tests and deploy to Fly.io via GitHub Actions.
+
+To enable automatic deploys, add `FLY_API_TOKEN` to your repository secrets:
+
+1. Generate a token: `fly tokens create deploy -x 999999h`
+2. Add it to GitHub: Settings → Secrets and variables → Actions → New repository secret
+
 ## Configuration
 
 ### Environment Variables
