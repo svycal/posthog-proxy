@@ -51,8 +51,16 @@ Requires Go 1.22. Use [mise](https://mise.jdx.dev) to install:
 
 ```bash
 mise install
-mise exec -- go run .
 ```
+
+### Make Targets
+
+| Command      | Description              |
+| ------------ | ------------------------ |
+| `make build` | Compile the binary       |
+| `make test`  | Run tests                |
+| `make run`   | Run the proxy locally    |
+| `make clean` | Remove the built binary  |
 
 ## Verification
 
