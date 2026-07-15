@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for savvycal-posthog-proxy on 2026-01-30T11:00:43-06:00
+# fly.toml app configuration file for appointments-posthog-proxy
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'savvycal-posthog-proxy'
+app = 'appointments-posthog-proxy'
 primary_region = 'iad'
 
 [build]
